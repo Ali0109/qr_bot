@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  bot:
+    build: .
+    volumes:
+      - .:/qr_bot
+    ports:
+      - 8001:8001
+    image: app:qr_bot
+    container_name: qr_bot_container
+    command: python main.py
+
