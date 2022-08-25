@@ -2,11 +2,11 @@ import os
 import requests
 
 # --- URL ---
-domain = "http://127.0.0.1:8000"
+domain = "https://invitations.uz"
 
 # --- OS PATH ---
 # path = "D:\MyFiles\domains\app\src"
-path_os_all = os.path.abspath(__file__).split("\\")
+path_os_all = os.path.abspath(__file__).split("/")
 path_os = ""
 for tmp in path_os_all:
     if tmp == "qr_bot":
@@ -15,9 +15,9 @@ for tmp in path_os_all:
     path_os += f"{tmp}/"
 
 
-def contact_api(key):
+def contact_api(phone):
     path = "qr_by_phone"
-    contact_req = requests.get(url=f"{domain}/api/{path}/{key}/")
+    contact_req = requests.get(url=f"{domain}/api/{path}/{phone}/")
     contact = contact_req.json()
     if contact_req.status_code == 200:
         result = {

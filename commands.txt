@@ -1,5 +1,6 @@
 docker-compose build
 docker-compose run --rm bot exec -it qr_bot_container /bin/bash
 docker-compose up
-docker exec -it hr_bot_container /bin/bash
-
+docker exec -it qr_bot_container /bin/bash
+docker-compose down
+docker rmi -f $(docker images -aq)

@@ -30,7 +30,7 @@ async def contact(message: types.Message):
             await bot.send_message(
                 message.from_user.id,
                 "Неверный номер,\n"
-                "Номер должен начинаться на 998",
+                "Неверно набран номер \nПример: 998 97 111 11 11",
                 reply_markup=contact_func()
             )
             return False
