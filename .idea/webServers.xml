@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="6df8f0c6-7416-4eed-8c87-56738e2bfee4" name="qr_bot">
-        <fileTransfer rootFolder="/root/qr_bot" accessType="SFTP" host="104.248.20.184" port="22" sshConfigId="d00d71c4-bce5-43f4-bb05-938738a3198e" sshConfig="root@104.248.20.184:22 key" keyPair="true">
+        <fileTransfer rootFolder="/root/qr_bot" accessType="SFTP" host="192.168.99.207" port="22" sshConfigId="d00d71c4-bce5-43f4-bb05-938738a3198e" sshConfig="root@192.168.99.207:22 key" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

@@ -5,8 +5,15 @@ services:
     volumes:
       - .:/qr_bot
     ports:
-      - 8001:8001
+      - 8011:8011
     image: app:qr_bot
     container_name: qr_bot_container
     command: python main.py
+    networks:
+      - mysql-network
+
+networks:
+  mysql-network:
+    external:
+      name: mysql-network
 
