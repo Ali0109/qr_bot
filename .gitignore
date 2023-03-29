@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Media
+media/
+
 # C extensions
 *.so
 
@@ -47,8 +50,6 @@ docs/_build/
 .venv
 venv/
 ENV/
-
-media/
 
 # JetBrains
 .idea/
