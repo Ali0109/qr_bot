@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # Media
-media/
+media/*
 
 # C extensions
 *.so
