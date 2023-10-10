@@ -14,7 +14,7 @@ if settings.DEVELOPER_MODE:
         executor.start_polling(dp, skip_updates=True)
 else:
     # webhook settings
-    WEBHOOK_HOST = 'https://admin.invitations.uz'
+    WEBHOOK_HOST = 'https://asnaav.uz'
     WEBHOOK_PATH = '/'
     WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
