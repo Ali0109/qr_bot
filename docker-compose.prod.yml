@@ -3,13 +3,14 @@ services:
 
   bot:
     build: .
+    restart: always
     volumes:
       - .:/app
     ports:
       - "8011:8011"
-    command: python main.py
+    command: python main_prod.py
     env_file:
-      - env/.env.local
+      - env/.env.prod
     networks:
       - qr_network
 
