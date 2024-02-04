@@ -8,7 +8,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from app.app import dp, bot
 from app.handlers.base import BaseHelper
 from app.handlers.start import StartHelper
-from settings import DOMAIN, ENTRYPOINT
+from settings import DOMAIN, ENDPOINT
 
 
 @dp.message_handler(content_types=["text", "contact"])
@@ -85,7 +85,7 @@ class ContactHelper(BaseHelper):
     async def get_response_ticket_numbers(self, phone):
         path = "ticket/numbers"
         data = {"phone": phone}
-        response = requests.get(url=f"{DOMAIN}/{ENTRYPOINT}/{path}", data=data)
+        response = requests.get(url=f"{DOMAIN}/{ENDPOINT}/{path}", data=data)
         return response
 
     async def get_start_keyboard(self):
