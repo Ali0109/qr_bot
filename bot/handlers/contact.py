@@ -19,17 +19,17 @@ async def contact_handler(message: types.Message):
         phone = await helper.get_correct_phone(message.contact.phone_number)
     else:
         phone = await helper.get_correct_phone(message.text)
-
+    print(1)
     is_valid = await helper.check_phone(phone)
     phone = f"+{phone}"
-
+    print(2)
     if is_valid:
-
+        print(3)
         response_ticket_numbers = await helper.get_response_ticket_numbers(phone)
         keyboard = await helper.get_start_keyboard()
-
+        print(4)
         tickets = response_ticket_numbers.json()
-
+        print(5)
         if tickets:
             for ticket in tickets:
                 ticket_number = ticket["number"]
@@ -40,13 +40,14 @@ async def contact_handler(message: types.Message):
                     photo=qr,
                     caption=ticket_number,
                 )
-
+            print(6)
             success_text = await helper.get_success_text()
             await bot.send_message(
                 chat_id=message.from_user.id,
                 text=success_text,
                 reply_markup=keyboard,
             )
+
         else:
 
             user_not_found_text = await helper.get_user_not_found_text()
@@ -64,7 +65,7 @@ async def contact_handler(message: types.Message):
             text=error_phone_text,
             reply_markup=keyboard
         )
-
+    print(7)
     return True
 
 
