@@ -1,7 +1,7 @@
 from aiogram.utils.executor import start_webhook
 
-from app import logging
-from app.app import dp, bot
+from bot import logging
+from bot.app import dp, bot
 from settings import DOMAIN
 
 

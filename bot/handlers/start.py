@@ -1,8 +1,8 @@
 from aiogram import types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-from app.app import bot, dp
-from app.handlers.base import BaseHelper
+from bot.app import bot, dp
+from bot.handlers.base import BaseHelper
 
 
 @dp.message_handler(

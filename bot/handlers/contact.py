@@ -5,9 +5,9 @@ import requests
 from aiogram import types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-from app.app import dp, bot
-from app.handlers.base import BaseHelper
-from app.handlers.start import StartHelper
+from bot.app import dp, bot
+from bot.handlers.base import BaseHelper
+from bot.handlers.start import StartHelper
 from settings import DOMAIN, ENDPOINT
 
 
