@@ -88,6 +88,8 @@ class ContactHelper(BaseHelper):
     async def get_response_ticket_numbers(self, phone):
         path = "ticket/numbers"
         data = {"phone": phone}
+        print(phone)
+        print(f"{DOMAIN}/{ENDPOINT}/{path}")
         response = requests.get(url=f"{DOMAIN}/{ENDPOINT}/{path}", data=data)
         return response
 
