@@ -6,7 +6,7 @@ from settings import DOMAIN
 
 
 # webhook settings
-WEBHOOK_HOST = DOMAIN
+WEBHOOK_HOST = "https://bot.asnaav.uz"
 WEBHOOK_PATH = "/"
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
