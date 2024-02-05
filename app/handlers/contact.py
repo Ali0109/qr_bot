@@ -21,6 +21,8 @@ async def contact_handler(message: types.Message):
         phone = await helper.get_correct_phone(message.text)
 
     is_valid = await helper.check_phone(phone)
+    phone = f"+{phone}"
+
     if is_valid:
 
         response_ticket_numbers = await helper.get_response_ticket_numbers(phone)
