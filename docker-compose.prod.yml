@@ -6,6 +6,7 @@ services:
     restart: always
     volumes:
       - .:/app
+      - ./media:/app/media
     ports:
       - "8011:8011"
     command: python main_prod.py
